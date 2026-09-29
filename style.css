@@ -1,0 +1,225 @@
+:root {
+    --bg-color: #0e1726;
+    --card-bg: rgba(21, 32, 48, 0.75);
+    --card-border: rgba(50, 230, 185, 0.15);
+    --text-color: #e2e8f0;
+    --text-muted: #94a3b8;
+    
+    --accent-teal: #00ad9f;
+    --accent-mint: #32e6b9;
+    --accent-glow: rgba(50, 230, 185, 0.2);
+    --nav-active: rgba(0, 173, 159, 0.2);
+    --gradient-accent: linear-gradient(135deg, #00ad9f 0%, #32e6b9 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.6;
+}
+
+header {
+    background: rgba(14, 23, 38, 0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--card-border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.profile-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.profile-pic {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--accent-mint);
+    box-shadow: 0 0 12px var(--accent-glow);
+}
+
+.header-text h1 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.header-text p {
+    font-size: 0.82rem;
+    color: var(--accent-mint);
+}
+
+.navbar {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.navbar a {
+    color: var(--text-muted);
+    text-decoration: none;
+    padding: 0.4rem 0.85rem;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.navbar a:hover, .navbar a.active {
+    color: #ffffff;
+    background-color: var(--nav-active);
+    border: 1px solid rgba(50, 230, 185, 0.3);
+}
+
+.container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.card {
+    background: var(--card-bg);
+    backdrop-filter: blur(16px);
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    padding: 1.8rem;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(50, 230, 185, 0.4);
+    box-shadow: 0 10px 30px -10px var(--accent-glow);
+}
+
+.card h2 {
+    font-size: 1.3rem;
+    color: #ffffff;
+    border-bottom: 2px solid var(--card-border);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.nav-list, .skills-list {
+    padding-left: 1.2rem;
+}
+
+.nav-list li, .skills-list li {
+    margin-bottom: 0.5rem;
+}
+
+.nav-list a {
+    color: var(--accent-mint);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.nav-list a:hover {
+    text-decoration: underline;
+}
+
+.project-box {
+    background: rgba(14, 23, 38, 0.6);
+    border: 1px solid var(--card-border);
+    border-left: 4px solid var(--accent-mint);
+    padding: 1.2rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.project-box h3 {
+    color: #ffffff;
+    font-size: 1.1rem;
+    margin-bottom: 0.4rem;
+}
+
+.status-badge {
+    display: inline-block;
+    color: var(--accent-mint);
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin-bottom: 0.5rem;
+}
+
+.contact-methods {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+}
+
+.contact-card {
+    flex: 1;
+    min-width: 220px;
+    background: rgba(14, 23, 38, 0.6);
+    border: 1px solid var(--card-border);
+    border-top: 3px solid var(--accent-mint);
+    padding: 1.2rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.contact-card h3 {
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+}
+
+.contact-card a {
+    color: var(--accent-mint);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.contact-card a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    text-align: center;
+    padding: 1.2rem;
+    background-color: rgba(14, 23, 38, 0.9);
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    border-top: 1px solid var(--card-border);
+    margin-top: auto;
+}
+
+.student-footer {
+    background-color: var(--accent-teal);
+    color: #ffffff;
+    border-top: 1px solid var(--accent-mint);
+    padding: 0.8rem 0;
+    font-weight: bold;
+    font-size: 0.85rem;
+    text-align: center;
+}
